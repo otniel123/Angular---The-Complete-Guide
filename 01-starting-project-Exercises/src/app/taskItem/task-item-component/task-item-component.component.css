@@ -1,0 +1,80 @@
+.task {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    margin: 10px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .task-completed {
+    text-decoration: line-through;
+    text-decoration-color: #bdbdbd;
+    text-decoration-thickness: 2px;
+  
+    color: #757575;
+    opacity: 0.7;
+  
+    transform: scale(0.98);
+    transition: all 0.2s ease;
+  }
+
+  .task-description {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  .task.high {
+    border-left: 5px solid #e53935;
+  }
+  
+  .task.medium {
+    border-left: 5px solid #fb8c00;
+  }
+  
+  .task.low {
+    border-left: 5px solid #43a047;
+  }
+  
+  /* efeito hover (fica mais “vivo”) */
+  .task:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  }
+  
+  .task-title {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .task-info {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #666;
+  }
+
+  .complete-btn {
+    margin-top: 12px;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .complete-btn:hover {
+    background-color: #43a047;
+    transform: translateY(-1px);
+  }
+  
+  .complete-btn:active {
+    transform: scale(0.98);
+  }

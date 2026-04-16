@@ -1,0 +1,6 @@
+<div [class.task-completed]="isTaskCompleted" class="task" [class.high]="getPriority == 'high'" [class.medium]="getPriority == 'medium'" [class.low]="getPriority == 'low'">
+    <span class="task-title">{{title}}</span>
+    <p class="task-description">{{description}}</p>
+    <p class="task-info">📅{{ dueDate }} 👤 {{ assignee }}</p>
+    <button class="complete-btn" (click)="onClickCompleteButton()">Marcar como concluída</button>
+  </div>
