@@ -2,8 +2,15 @@
 <main>
     <ul id="users">
         <li>
-            <app-user></app-user>
+            <app-user [selectedUser]="users[0]"></app-user>
+        </li>
+        <li>
+            <app-user [selectedUser]="users[1]"></app-user>
+        </li>
+        <li>
+            <app-user [selectedUser]="users[2]"></app-user>
         </li>
     </ul>
 </main>
 <app-product-card-component></app-product-card-component>
+<app-produc-card-component [produto]="products[0]"></app-produc-card-component>
