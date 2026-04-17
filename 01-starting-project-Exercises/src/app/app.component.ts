@@ -5,13 +5,14 @@ import { UserComponent } from "./user/user.component";
 import { ProductCardComponentComponent } from './product/product-card-component/product-card-component.component';
 import { ProducCardComponent } from './productCard/produc-card-component/produc-card-component';
 import { TaskItemComponentComponent } from './taskItem/task-item-component/task-item-component.component';
+import { CounterButtonComponent } from './counter-button/counter-button.component';
 import { DUMMY_PRODUCTS_CARD } from './dummy-product-card';
 import { DUMMY_USERS } from './dummy-users';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, UserComponent, ProductCardComponentComponent, ProducCardComponent, TaskItemComponentComponent],
+  imports: [HeaderComponent, UserComponent, ProductCardComponentComponent, ProducCardComponent, TaskItemComponentComponent, CounterButtonComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
@@ -23,4 +24,9 @@ export class AppComponent {
   descricaoTask1: string = "Descrição teste 1"
   dueDateTask1: string = "10/05/2026";
   assigneeTask1: string = "Otniel Marques";
+
+  labelButton : string = "Nível de urgencia"
+  minButton : number = 1
+  maxButton : number = 10;
+  initialValue : number = 1;
 }
