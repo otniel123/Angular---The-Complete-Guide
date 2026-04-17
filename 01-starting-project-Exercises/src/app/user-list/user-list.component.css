@@ -1,0 +1,20 @@
+.users-container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* lista à esquerda */
+  .users-items {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* área do usuário à direita */
+  .username {
+    flex: 1;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #f5f5f5;
+  }

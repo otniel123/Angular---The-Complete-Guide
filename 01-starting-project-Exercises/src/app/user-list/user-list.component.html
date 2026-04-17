@@ -1,0 +1,38 @@
+<div class="users-container">
+    <div class="users-items">
+      <app-user-item
+        [user]="getUsers[0]"
+        [isSelected]="selectedUserId === getUsers[0].id"
+        (select)="onSelectUser($event)"
+      />
+      <app-user-item
+        [user]="getUsers[1]"
+        [isSelected]="selectedUserId === getUsers[1].id"
+        (select)="onSelectUser($event)"
+      />
+      <app-user-item
+        [user]="getUsers[2]"
+        [isSelected]="selectedUserId === getUsers[2].id"
+        (select)="onSelectUser($event)"
+      />
+      <app-user-item
+        [user]="getUsers[3]"
+        [isSelected]="selectedUserId === getUsers[3].id"
+        (select)="onSelectUser($event)"
+      />
+      <app-user-item
+        [user]="getUsers[4]"
+        [isSelected]="selectedUserId === getUsers[4].id"
+        (select)="onSelectUser($event)"
+      />
+      <app-user-item
+        [user]="getUsers[5]"
+        [isSelected]="selectedUserId === getUsers[5].id"
+        (select)="onSelectUser($event)"
+      />
+    </div>
+  
+    <div class="username">
+      <p>{{ selectedUserName }}</p>
+    </div>
+  </div>
