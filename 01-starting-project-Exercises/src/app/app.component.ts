@@ -8,13 +8,15 @@ import { CounterButtonComponent } from './counter-button/counter-button.componen
 import { AlertBoxComponent } from './alert-box/alert-box.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { ToggleCardComponent } from './toggle-card/toggle-card.component';
+import { TaskBoardComponent } from './task-board/task-board.component'; 
 import { DUMMY_PRODUCTS_CARD } from './dummy-product-card';
 import { DUMMY_USERS } from './dummy-users';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, UserComponent, ProductCardComponentComponent, ProducCardComponent, TaskItemComponentComponent, CounterButtonComponent, AlertBoxComponent, UserListComponent, ToggleCardComponent],
+  imports: [HeaderComponent, UserComponent, ProductCardComponentComponent, ProducCardComponent, TaskItemComponentComponent, 
+            CounterButtonComponent, AlertBoxComponent, UserListComponent, ToggleCardComponent, TaskBoardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
