@@ -1,33 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Contact } from '../new-contact/contact.model';
 import { NewContact } from "../new-contact/new-contact";
+import { UpperCasePipe, DatePipe } from '@angular/common';
+import { ContactService } from '../services/contact-service/contact-service';
 
 @Component({
   selector: 'app-contact-list',
-  imports: [NewContact],
+  imports: [NewContact, UpperCasePipe, DatePipe],
   templateUrl: './contact-list.html',
   styleUrl: './contact-list.css',
 })
 export class ContactList {
-  contacts: Contact[] = [];
+  private contactService = inject(ContactService);
 
-  onAddNewContact(data: {
-    name: string,
-    email: string,
-    phone: string
-  }){
-
-    const newContact: Contact = {
-      id: crypto.randomUUID(),
-      name: data.name,
-      email: data.email,
-      phone: data.phone,
-      createdAt: new Date()
-    }
-
-
-    this.contacts.push(newContact)
-    
+  get getContacts(){
+    return this.contactService.getContacts;
   }
 
 }

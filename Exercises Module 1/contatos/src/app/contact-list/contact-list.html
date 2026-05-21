@@ -1,6 +1,7 @@
-<app-new-contact (emitContact)="onAddNewContact($event)"></app-new-contact>
-@for (contact of contacts; track contact.id) {
-    <p>Name: {{contact.name}}</p>
+<app-new-contact></app-new-contact>
+@for (contact of getContacts; track contact.id) {
+    <p>Name: {{contact.name | uppercase}}</p>
     <p>Email: {{contact.email}}</p>
     <p>Phone: {{contact.phone}}</p>
+    <p>Created at: {{contact.createdAt | date:'fullDate'}}</p>
 }

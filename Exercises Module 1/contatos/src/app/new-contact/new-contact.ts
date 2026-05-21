@@ -1,6 +1,7 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Contact } from './contact.model';
+import { ContactService } from '../services/contact-service/contact-service';
 
 @Component({
   selector: 'app-new-contact',
@@ -10,14 +11,14 @@ import { Contact } from './contact.model';
 })
 export class NewContact {
 
-  @Output() emitContact = new EventEmitter();
+  private contactService = inject(ContactService);
 
   enteredName = '';
   enteredEmail = '';
   enteredPhone = '';
 
   onSubmitForm(){
-    this.emitContact.emit({
+    this.contactService.addNewContact({
       name: this.enteredName,
       email: this.enteredEmail,
       phone: this.enteredPhone,
