@@ -1,0 +1,18 @@
+<form action="">
+    <label for="">Descrição</label>
+    <input type="text" name="expense-description" id="" [(ngModel)]="enteredDescription">
+
+    <label for="">Valor</label>
+    <input type="number" name="expense-value" id="" [(ngModel)]="enteredValue">
+
+    <label for="">Categoria</label>
+    <select name="" id="expenseCategory">
+        <option value="food">Food</option>
+        <option value="transport">Transport</option>
+        <option value="entertainment">Entertainment</option>
+        <option value="bills">Bills</option>
+        <option value="other">Other</option>
+    </select>
+
+    <button type="submit" (click)="onSubmitForm()">Submit</button>
+</form>

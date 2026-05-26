@@ -42,25 +42,26 @@ export class ExpenseService {
     return expensesByCategory;
   }
 
-  addExpense(data: {id: string, description: string, amount: number,
-    category: 'food' | 'transport' | 'entertainment' | 'bills' | 'other',
-    date: Date}){
+  addExpense(data: { description: string, amount: number,
+    category: 'food' | 'transport' | 'entertainment' | 'bills' | 'other'}){
 
     const newExpense: Expense = {
-      id: data.id,
+      id: crypto.randomUUID(),
       description: data.description,
       amount: data.amount,
       category: data.category,
-      date: data.date
+      date: new Date()
     }
 
 
-    this.expenses.push(data);
+    this.expenses.push(newExpense);
     this.saveToStorage();
+    this.loadFromStorage()
   }
 
   removeExpense(id: string){
     this.expenses = this.expenses.filter(expense => expense.id != id);
     this.saveToStorage();
+    this.loadFromStorage()
   }
 }

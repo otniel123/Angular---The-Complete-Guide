@@ -1,0 +1,8 @@
+@for (expense of expensesList; track expense.id) {
+    <p>Expense id: {{expense.id}}</p>
+    <p>Expense description: {{expense.description}}</p>
+    <p>Expense amount: {{expense.amount | currency}}</p>
+    <p>Expense category: {{expense.category}}</p>
+    <p>Expense date: {{expense.date | date}}</p>
+    <button (click)="onClickRemoveExpenseButton(expense.id)">Remove expense</button>
+}
