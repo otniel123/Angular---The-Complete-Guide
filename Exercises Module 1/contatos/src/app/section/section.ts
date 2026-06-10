@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-section',
-  imports: [FormsModule],
+  standalone: false,
   templateUrl: './section.html',
   styleUrl: './section.css',
 })

@@ -1,11 +1,10 @@
 import { Component, EventEmitter, inject, Output } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { Contact } from './contact.model';
 import { ContactService } from '../services/contact-service/contact-service';
 
 @Component({
   selector: 'app-new-contact',
-  imports: [FormsModule],
+  standalone: false,
+  //imports: [FormsModule],
   templateUrl: './new-contact.html',
   styleUrl: './new-contact.css',
 })

@@ -3,7 +3,7 @@ import { ContactService } from '../services/contact-service/contact-service';
 
 @Component({
   selector: 'app-contact-stats',
-  imports: [],
+  standalone: false,
   templateUrl: './contact-stats.html',
   styleUrl: './contact-stats.css',
 })

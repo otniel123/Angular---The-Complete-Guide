@@ -6,7 +6,8 @@ import { ContactService } from '../services/contact-service/contact-service';
 
 @Component({
   selector: 'app-contact-list',
-  imports: [NewContact, UpperCasePipe, DatePipe],
+  standalone: false,
+  //imports: [NewContact, UpperCasePipe, DatePipe],
   templateUrl: './contact-list.html',
   styleUrl: './contact-list.css',
 })

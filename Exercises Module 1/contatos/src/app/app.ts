@@ -6,7 +6,8 @@ import { ContactStats } from "./contact-stats/contact-stats";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ContactList, Section, ContactStats],
+  standalone: false,
+  //imports: [RouterOutlet, ContactList, Section, ContactStats],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
