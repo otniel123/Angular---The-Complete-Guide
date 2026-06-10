@@ -1,0 +1,36 @@
+<form>
+    <div class="form-group">
+      <label for="title">Nome do título</label>
+      <input name="title" type="text" id="title" placeholder="Ex: Breaking Bad" [(ngModel)]="title.name">
+    </div>
+  
+    <div class="form-row">
+      <div class="form-group">
+        <label for="genre">Gênero</label>
+        <select name="genre" id="genre" [(ngModel)]="title.gener">
+          <option value="Romance">Romance</option>
+          <option value="Comedy">Comédia</option>
+          <option value="Action">Ação</option>
+          <option value="Drama">Drama</option>
+          <option value="Horror">Terror</option>
+          <option value="Suspense">Suspense</option>
+          <option value="Other">Outro</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="type">Tipo</label>
+        <select name="type" id="type" [(ngModel)]="title.type">
+          <option value="Movie">Filme</option>
+          <option value="Series">Série</option>
+        </select>
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="year">Ano</label>
+      <input name="date" type="date" id="year" [(ngModel)]="title.year">
+    </div>
+
+    <button type="submit" (click)="onClickAddTitle()">Adicionar titulo</button>
+  </form>

@@ -1,0 +1,86 @@
+:host {
+    display: block;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  
+  form {
+    background: rgba(48, 59, 55, 0.6);
+    border: 1px solid rgba(225, 238, 235, 0.15);
+    border-radius: 16px;
+    padding: 2rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 1.25rem;
+  }
+  
+  label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #a8c9bf;
+    letter-spacing: 0.02em;
+  }
+  
+  input,
+  select {
+    background: rgba(26, 31, 29, 0.7);
+    border: 1px solid rgba(168, 201, 191, 0.25);
+    border-radius: 8px;
+    color: #e1eeeb;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    padding: 10px 14px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  input:focus,
+  select:focus {
+    border-color: rgba(168, 201, 191, 0.7);
+    box-shadow: 0 0 0 3px rgba(29, 158, 117, 0.15);
+  }
+  
+  select option {
+    background: #1a1f1d;
+    color: #e1eeeb;
+  }
+  
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.8);
+    cursor: pointer;
+  }
+  
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    margin-top: 0.5rem;
+    background: #1D9E75;
+    border: none;
+    border-radius: 8px;
+    color: #e1eeeb;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 12px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+  }
+  
+  button[type="submit"]:hover {
+    background: #0F6E56;
+  }
+  
+  button[type="submit"]:active {
+    transform: scale(0.98);
+  }
