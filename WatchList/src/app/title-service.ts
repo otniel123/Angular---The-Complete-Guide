@@ -12,6 +12,17 @@ export class TitleService {
     return;
   }
 
+  updateTitleStatus(titleName: string, titleStatus: "want-watch" | "watching" | "watched"){
+    this.titlesList.filter(t => t.name === titleName).forEach(t => t.status = titleStatus);
+    return;
+  }
+
+  updateTitleRating(titleName: string, titleRating : 0 | 1 | 2 | 3 | 4 | 5 | Object = 0){
+    this.titlesList.filter(t => t.name === titleName).forEach(t => t.rating = titleRating);
+    console.log(this.titlesList);
+    return
+  }
+
   get getTitleList(){
     return this.titlesList;
   }

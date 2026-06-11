@@ -101,3 +101,91 @@
     color: #F09595;
     border-color: rgba(226, 75, 74, 0.3);
   }
+
+  .card-select {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(168, 201, 191, 0.2);
+    background: transparent;
+    color: #a8c9bf;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23a8c9bf' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 28px;
+  }
+  
+  .card-select:hover {
+    background-color: rgba(168, 201, 191, 0.1);
+    color: #e1eeeb;
+    border-color: rgba(168, 201, 191, 0.5);
+  }
+  
+  .card-select:focus {
+    outline: none;
+    border-color: rgba(168, 201, 191, 0.7);
+    box-shadow: 0 0 0 3px rgba(29, 158, 117, 0.15);
+    color: #e1eeeb;
+  }
+  
+  .card-select option {
+    background: #1a1f1d;
+    color: #e1eeeb;
+  }
+
+  .star-rating {
+    margin-top: 14px;
+    border-top: 1px solid rgba(168, 201, 191, 0.12);
+    padding-top: 14px;
+  }
+  
+  .star-rating-label {
+    font-size: 12px;
+    color: #a8c9bf;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+  
+  .stars input {
+    display: none;
+  }
+  
+  .stars label {
+    font-size: 24px;
+    color: rgba(168, 201, 191, 0.2);
+    cursor: pointer;
+    transition: color 0.15s;
+    line-height: 1;
+  }
+  
+  .stars label.full {
+    width: 24px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 2px;
+  }
+  
+  .stars label.half {
+    width: 12px;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0;
+  }
+  
+  .stars label:hover,
+  .stars label:hover ~ label,
+  .stars input:checked ~ label {
+    color: #1D9E75;
+  }

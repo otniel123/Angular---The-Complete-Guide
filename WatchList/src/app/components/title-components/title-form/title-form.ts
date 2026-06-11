@@ -17,10 +17,21 @@ export class TitleForm {
     name: "",
     gener: "",
     year: "",
-    type: ""
+    type: "",
+    status: "want-watch",
+    rating: 0
   };
 
   onClickAddTitle(){
-    alert(this.title.name + " " + this.title.gener + " " + this.title.type + " " + this.title.year)
+    this.titleService.addTitle(this.title);
+    this.title  = {
+      name: "",
+      gener: "",
+      year: "",
+      type: "",
+      status: "want-watch",
+      rating: 0
+    };
+    return;
   }
 }
