@@ -10,7 +10,5 @@ import { TitleCard } from "../title-card/title-card";
   styleUrl: './title-list.css',
 })
 export class TitleList {
-  titleService: TitleService = inject(TitleService);
-
-  titleList: TitleModel[] = this.titleService.getTitleList;
+  titleService = inject(TitleService);
 }

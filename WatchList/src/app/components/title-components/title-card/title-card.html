@@ -1,4 +1,5 @@
-<div class="title-card">
+@if (willRemoveTitle === false) {
+  <div class="title-card">
     <div class="card-header">
       <p class="card-title">{{ titleName }}</p>
       <span class="card-type-badge">{{ titleType }}</span>
@@ -24,7 +25,7 @@
         <option value="watching">Assistindo</option>
         <option value="watched">Assistido</option>
       </select>
-      <button class="btn-icon danger">
+      <button class="btn-icon danger" (click)="onClickRemoveTitle()">
         <i class="ti ti-trash"></i> Remover
       </button>
     </div>
@@ -50,3 +51,7 @@
       </div>
     }
   </div>
+}
+@if (willRemoveTitle === true) {
+  <app-delete-title-alert (clickCancelButton)="removeTitleCancel()" (clickConfirmButton)="removeTitleConfirm()" [titleName]="titleName"/>
+}

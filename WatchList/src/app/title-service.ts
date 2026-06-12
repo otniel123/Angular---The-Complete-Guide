@@ -7,9 +7,14 @@ import { TitleModel } from './model/title.model';
 export class TitleService {
   titlesList: TitleModel[] = [];
 
+
   addTitle(titleModel: TitleModel){
     this.titlesList.push(titleModel);
     return;
+  }
+
+  removeTitle(titlename: string){
+    this.titlesList = this.titlesList.filter(t => t.name !== titlename);
   }
 
   updateTitleStatus(titleName: string, titleStatus: "want-watch" | "watching" | "watched"){

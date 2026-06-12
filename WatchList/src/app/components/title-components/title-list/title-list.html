@@ -1,5 +1,5 @@
 <div class="title-list">
-    @for (title of titleList; track title.name) {
+    @for (title of titleService.getTitleList; track title.name) {
       <app-title-card [titleName]="title.name" [titleGener]="title.gener" [titleType]="title.type" [titleYear]="title.year"/>
     }
   </div>
