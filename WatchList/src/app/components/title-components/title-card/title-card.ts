@@ -16,10 +16,11 @@ export class TitleCard {
   @Input({required: true}) titleGener !: string;
   @Input({required: true}) titleType !: string;
   @Input({required: true}) titleYear !: string;
+  @Input({required: true}) titleStatus !: "want-watch" | "watching" | "watched";
+  @Input({required: true}) titleRating !: 0 | 1 | 2 | 3 | 4 | 5 | Object;
 
   willRemoveTitle: boolean = false;
 
-  titleStatus: "want-watch" | "watching" | "watched" = "want-watch";
   
   onChangeStatus(){
     this.titleService.updateTitleStatus(this.titleName, this.titleStatus);

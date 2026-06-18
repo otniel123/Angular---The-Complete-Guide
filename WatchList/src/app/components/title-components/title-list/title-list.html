@@ -1,5 +1,14 @@
+<div class="filter-bar">
+  <span class="filter-label">Filtrar por status:</span>
+  <select class="filter-select" (ngModelChange)="onStatusFilterChange($event)" [(ngModel)]="titleStatusFilter">
+    <option value="all">Todos</option>
+    <option value="want-watch">Quero assistir</option>
+    <option value="watching">Assistindo</option>
+    <option value="watched">Assistido</option>
+  </select>
+</div>
 <div class="title-list">
-    @for (title of titleService.getTitleList; track title.name) {
-      <app-title-card [titleName]="title.name" [titleGener]="title.gener" [titleType]="title.type" [titleYear]="title.year"/>
+    @for (title of titleListFiltered; track title.name) {
+      <app-title-card [titleRating]="title.rating" [titleStatus]="title.status" [titleName]="title.name" [titleGener]="title.gener" [titleType]="title.type" [titleYear]="title.year"/>
     }
   </div>

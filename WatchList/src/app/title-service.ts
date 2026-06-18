@@ -28,6 +28,19 @@ export class TitleService {
     return
   }
 
+  getTitleListFiltered(object: Object){
+    switch (object){
+      case "want-watch":
+        return this.titlesList.filter(t => t.status === "want-watch");
+      case "watched":
+        return this.titlesList.filter(t => t.status === "watched");
+      case "watching":
+        return this.titlesList.filter(t => t.status === "watching");
+      default:
+        return this.getTitleList;
+    }
+  }
+
   get getTitleList(){
     return this.titlesList;
   }
