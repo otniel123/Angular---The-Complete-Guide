@@ -1,0 +1,15 @@
+<div class="alert-box">
+    <div class="alert-icon">
+      <i class="ti ti-trash"></i>
+    </div>
+  
+    <h1 class="alert-title">Tem certeza?</h1>
+    <p class="alert-description">
+      O título <strong>{{ titleName }}</strong> será removido permanentemente da sua lista.
+    </p>
+  
+    <div class="alert-actions">
+      <button class="btn-cancel" (click)="onClickCancelButton()">Cancelar</button>
+      <button class="btn-confirm" (click)="onClickConfirmButton()">Remover título</button>
+    </div>
+  </div>

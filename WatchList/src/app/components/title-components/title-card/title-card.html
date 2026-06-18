@@ -1,4 +1,5 @@
-<div class="title-card">
+@if (willRemoveTitle === false) {
+  <div class="title-card">
     <div class="card-header">
       <p class="card-title">{{ titleName }}</p>
       <span class="card-type-badge">{{ titleType }}</span>
@@ -19,12 +20,12 @@
     </div>
   
     <div class="card-actions">
-      <select name="" id="" class="card-select" [(ngModel)]="titleStatus" (change)="onChangeStatus()">
+      <select name="" id="status-select" class="card-select" [(ngModel)]="titleStatus" (ngModelChange)="onChangeStatus()">
         <option value="want-watch">Quero assistir</option>
         <option value="watching">Assistindo</option>
         <option value="watched">Assistido</option>
       </select>
-      <button class="btn-icon danger">
+      <button class="btn-icon danger" (click)="onClickRemoveTitle()">
         <i class="ti ti-trash"></i> Remover
       </button>
     </div>
@@ -32,21 +33,25 @@
       <div class="star-rating">
         <span class="star-rating-label">Sua avaliação</span>
         <div class="stars">
-          <input type="radio" [id]="'s5-'+titleName"   [name]="'rating-'+titleName" value="5" (click)="onChangeRating($event.target.value)" >
+          <input type="radio" [id]="'s5-'+titleName" [checked]="titleRating == 5"   [name]="'rating-'+titleName" value="5" (click)="onChangeRating($event.target.value)" >
           <label  [for]="'s5-'+titleName"   class="full"  title="5">★</label>
     
-          <input type="radio" [id]="'s4-'+titleName"   [name]="'rating-'+titleName" value="4" (click)="onChangeRating($event.target.value)">
+          <input type="radio" [id]="'s4-'+titleName" [checked]="titleRating == 4"   [name]="'rating-'+titleName" value="4" (click)="onChangeRating($event.target.value)">
           <label  [for]="'s4-'+titleName"   class="full"  title="4">★</label>
     
-          <input type="radio" [id]="'s3-'+titleName"   [name]="'rating-'+titleName" value="3" (click)="onChangeRating($event.target.value)">
+          <input type="radio" [id]="'s3-'+titleName" [checked]="titleRating == 3"   [name]="'rating-'+titleName" value="3" (click)="onChangeRating($event.target.value)">
           <label  [for]="'s3-'+titleName"   class="full"  title="3">★</label>
     
-          <input type="radio" [id]="'s2-'+titleName"   [name]="'rating-'+titleName" value="2" (click)="onChangeRating($event.target.value)">
+          <input type="radio" [id]="'s2-'+titleName" [checked]="titleRating == 2"   [name]="'rating-'+titleName" value="2" (click)="onChangeRating($event.target.value)">
           <label  [for]="'s2-'+titleName"   class="full"  title="2">★</label>
     
-          <input type="radio" [id]="'s1-'+titleName"   [name]="'rating-'+titleName" value="1" (click)="onChangeRating($event.target.value)">
+          <input type="radio" [id]="'s1-'+titleName" [checked]="titleRating == 1"   [name]="'rating-'+titleName" value="1" (click)="onChangeRating($event.target.value)">
           <label  [for]="'s1-'+titleName"   class="full"  title="1">★</label>
         </div>
       </div>
     }
   </div>
+}
+@if (willRemoveTitle === true) {
+  <app-delete-title-alert (clickCancelButton)="removeTitleCancel()" (clickConfirmButton)="removeTitleConfirm()" [titleName]="titleName"/>
+}
