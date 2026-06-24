@@ -1,0 +1,21 @@
+.profile-card{
+    background-color: aquamarine;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 3px;
+}
+
+.slot-header{
+    color: brown;
+    font-size: 40px;    
+}
+
+.slot-body{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+    color: blanchedalmond;
+}
+
+.slot-footer{
+    border-top: 2px solid black;
+}
