@@ -1,0 +1,26 @@
+  <div class="statistics-card">
+    <h3 class="card-title">📊 Relatório Rápido de Estatísticas</h3>
+    
+    <div class="stats-grid">
+      <div class="stat-item">
+        <p class="stat-label">Total de Registros</p>
+        <p class="stat-value">{{ userList.length }}</p>
+      </div>
+      <div class="stat-item">
+        <p class="stat-label">Idade Média</p>
+        <p class="stat-value">{{ userService.getAverageAge() }} anos</p>
+      </div>
+      <div class="stat-item">
+        <p class="stat-label">Usuário Mais Velho</p>
+        <p class="stat-value stat-value-name">{{ userService.getOldestUser().name }}</p>
+      </div>
+      <div class="stat-item">
+        <p class="stat-label">Usuário Mais Jovem</p>
+        <p class="stat-value stat-value-name">{{ userService.getYoungestUser().name }}</p>
+      </div>
+    </div>
+    
+    <div class="card-footer">
+      <p class="footer-text">Maiores de idade: <strong>{{ userService.countMajors() }}</strong> | Menores de idade: <strong>{{ userService.countMinors() }}</strong></p>
+    </div>
+  </div>

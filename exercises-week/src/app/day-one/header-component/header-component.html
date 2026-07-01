@@ -1,0 +1,19 @@
+<div class="header-titulo">
+    <h1>Dashboard do Sistema</h1>
+    <p>Bem-vindo ao painel de controle - Aqui você gerencia
+        usuários e vê estatísticas</p>
+</div>
+<div class="header-stats">
+    <div class="stat-box stat-box-blue">
+        <p class="stat-box-label">Total de Usuários</p>
+        <h2 class="stat-box-value stat-box-blue-text">{{ userList.length }}</h2>
+    </div>
+    <div class="stat-box stat-box-purple">
+        <p class="stat-box-label">Idade Média</p>
+        <h2 class="stat-box-value stat-box-purple-text">{{ userService.getAverageAge() }}</h2>
+    </div>
+    <div class="stat-box stat-box-green">
+        <p class="stat-box-label">Usuário Mais Novo</p>
+        <h2 class="stat-box-value stat-box-green-text">{{ userService.getYoungestUser().name }}</h2>
+    </div>
+</div>
