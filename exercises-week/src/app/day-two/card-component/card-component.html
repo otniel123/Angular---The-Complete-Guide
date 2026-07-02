@@ -1,3 +1,7 @@
-<ng-content>
-    
-</ng-content>
+<div class="card-header"><ng-content select="[card-title]"/></div>
+<div class="card-body"><ng-content/></div>
+<div class="card-footer">
+    <ng-content select="[card-action]">
+        Nenhuma ação disponível
+    </ng-content>
+</div>
