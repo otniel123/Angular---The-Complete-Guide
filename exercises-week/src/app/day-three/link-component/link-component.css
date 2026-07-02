@@ -1,0 +1,80 @@
+:host[appLink] {
+  display: inline-block;
+  padding: 8px 16px;
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+:host[appLink]::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #667eea;
+  transition: width 0.3s ease;
+}
+
+:host[appLink]:hover {
+  color: #5568d3;
+  background-color: rgba(102, 126, 234, 0.1);
+}
+
+:host[appLink]:hover::after {
+  width: 100%;
+}
+
+:host[appLink].secondary {
+  color: #666666;
+}
+
+:host[appLink].secondary:hover {
+  color: #333333;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+:host[appLink].secondary:hover::after {
+  background-color: #666666;
+}
+
+:host[appLink].danger {
+  color: #ef4444;
+}
+
+:host[appLink].danger:hover {
+  color: #dc2626;
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+:host[appLink].danger:hover::after {
+  background-color: #ef4444;
+}
+
+:host[appLink].success {
+  color: #10b981;
+}
+
+:host[appLink].success:hover {
+  color: #059669;
+  background-color: rgba(16, 185, 129, 0.1);
+}
+
+:host[appLink].success:hover::after {
+  background-color: #10b981;
+}
+
+:host[appLink].small {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+:host[appLink].large {
+  padding: 12px 20px;
+  font-size: 16px;
+}

@@ -1,0 +1,73 @@
+:host[appButton] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  outline: none;
+  background-color: #667eea;
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+}
+
+:host[appButton]:hover {
+  background-color: #5568d3;
+  box-shadow: 0 6px 12px rgba(102, 126, 234, 0.4);
+  transform: translateY(-2px);
+}
+
+:host[appButton]:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(102, 126, 234, 0.3);
+}
+
+:host[appButton]:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+:host[appButton].secondary {
+  background-color: #ffffff;
+  color: #667eea;
+  border: 2px solid #667eea;
+  box-shadow: none;
+}
+
+:host[appButton].secondary:hover {
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.2);
+}
+
+:host[appButton].danger {
+  background-color: #ef4444;
+}
+
+:host[appButton].danger:hover {
+  background-color: #dc2626;
+  box-shadow: 0 6px 12px rgba(239, 68, 68, 0.4);
+}
+
+:host[appButton].success {
+  background-color: #10b981;
+}
+
+:host[appButton].success:hover {
+  background-color: #059669;
+  box-shadow: 0 6px 12px rgba(16, 185, 129, 0.4);
+}
+
+:host[appButton].small {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+:host[appButton].large {
+  padding: 14px 28px;
+  font-size: 16px;
+}
