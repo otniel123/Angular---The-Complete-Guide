@@ -7,10 +7,11 @@ import { CardComponent } from '../day-two/card-component/card-component';
 import { SearchBoxComponent } from '../day-three/search-box-component/search-box-component';
 import { ButtonComponent } from '../day-three/button-component/button-component';
 import { LinkComponent } from '../day-three/link-component/link-component';
+import { TooltipHostComponent } from '../day-five/tooltip-host-component/tooltip-host-component';
 
 @Component({
   selector: 'app-dashboard-component',
-  imports: [CommonModule, HeaderComponent, StatCardComponent, UserListComponent, CardComponent, SearchBoxComponent, ButtonComponent, LinkComponent],
+  imports: [CommonModule, HeaderComponent, StatCardComponent, UserListComponent, CardComponent, SearchBoxComponent, ButtonComponent, LinkComponent, TooltipHostComponent],
   templateUrl: './dashboard-component.html',
   styleUrl: './dashboard-component.css',
 })
