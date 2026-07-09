@@ -1,0 +1,15 @@
+:host {
+    display: block;
+    padding: 10px;
+}
+
+:host(.success){
+    background-color: green;
+}
+:host(.warning){
+    background-color: yellow;
+}
+:host(.danger){
+    border: 20px;
+    background-color: red;
+}

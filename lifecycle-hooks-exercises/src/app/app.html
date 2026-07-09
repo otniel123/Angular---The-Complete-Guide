@@ -1,0 +1,8 @@
+@if(willComponentAppear === true){
+  <app-life-cycle-component/>
+}
+
+<button (click)="onClickButton()">Incrementar contador</button>
+<button (click)="onClickChangeAppearButton()">Esconder componente</button>
+
+<app-user-card-compnent [isValid]="isValid"/>
