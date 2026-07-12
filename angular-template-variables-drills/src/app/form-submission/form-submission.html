@@ -1,0 +1,15 @@
+<form action="" #form (ngSubmit)="onSubmit(form)">
+    <span>Digite seu nome no input ao lado: </span>
+    <input type="text" name="name" id="name" #inputName >
+    <br>
+    <span>Digite seu email no input ao lado: </span>
+    <input type="email" name="email" id="email" #inputEmail >
+    <br>
+    <span>Digite sua senha ao lado: </span>
+    <input type="text" name="password" id="password" #inputPassword>
+
+    <br>
+    <button type="submit">
+        Enviar dados
+    </button>
+</form>
