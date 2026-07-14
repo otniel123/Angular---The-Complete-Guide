@@ -6,10 +6,11 @@ import { FormSubmission } from './form-submission/form-submission';
 import { ViewChildComponent } from './view-child-component/view-child-component';
 import { TimerComponent } from './timer-component/timer-component';
 import { AutomaticFocus } from './automatic-focus/automatic-focus';
+import { CardComponent } from "./card-component/card-component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Counter, ResetAndFocusBtn, FormSubmission, ViewChildComponent, TimerComponent, AutomaticFocus],
+  imports: [RouterOutlet, Counter, ResetAndFocusBtn, FormSubmission, ViewChildComponent, TimerComponent, AutomaticFocus, CardComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
