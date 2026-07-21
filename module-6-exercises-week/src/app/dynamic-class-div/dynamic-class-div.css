@@ -1,0 +1,81 @@
+div {
+    background-color: #f8f9fa;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+    color: #333;
+    font-family: sans-serif;
+  
+    /* Estado inicial */
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+    visibility: hidden;
+  
+    transition:
+      opacity 250ms ease,
+      transform 250ms ease,
+      visibility 250ms;
+  }
+  
+  div.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    visibility: visible;
+  }
+
+  div {
+    max-width: 400px;
+    margin-top: 1rem;
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    border: 2px solid transparent;
+  
+    font-family: sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+  
+    opacity: 0;
+    transform: translateY(-10px) scale(.98);
+    visibility: hidden;
+  
+    transition:
+      opacity .25s ease,
+      transform .25s ease,
+      border-color .25s ease,
+      background-color .25s ease,
+      color .25s ease;
+  }
+  
+  /* Visível */
+  div.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+  }
+  
+  /* Success */
+  div.success {
+    background-color: #e8f8ee;
+    color: #1f7a3f;
+    border-color: #57c785;
+  }
+  
+  /* Warning */
+  div.warning {
+    background-color: #fff8e5;
+    color: #9a6700;
+    border-color: #f4c542;
+  }
+  
+  /* Error */
+  div.error {
+    background-color: #fdecec;
+    color: #b42318;
+    border-color: #f04438;
+  }
+
+.progress-bar{
+    height: 10px;
+    background-color: green;
+}
