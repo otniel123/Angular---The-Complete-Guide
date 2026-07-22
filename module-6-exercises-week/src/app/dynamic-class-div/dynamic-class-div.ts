@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, model, signal } from '@angular/core';
 import { ButtonComponent } from '../button-component/button-component';
 import { FormsModule } from '@angular/forms';
 
@@ -12,7 +12,7 @@ export class DynamicClassDiv {
   isActive = signal(true);
   status : "undefined" | "success" | "warning" | "error" = "undefined";
 
-  progress = signal(0);
+  progress = model(0);
 
   onClickButton(){
     this.isActive.set(!this.isActive());

@@ -1,7 +1,7 @@
 <button appButton (click)="onClickButton()">Clique aqui para ativar ou desativar a div</button>
 <div [class.active]="isActive()" [class]="{success: isSuccess, warning: isWarning, error: isError}">Div para ser ativada ou não</div>
 <label for="">Progresso: </label>
-<div class="progress-bar" [style.width]="progress()"></div>
+<div class="progress-bar" [style.width.%]="progress()"></div>
 <label for="">Selecione o status da div acima</label>
 <select name="" id="status" [(ngModel)]="status">
     <option value="success">Success</option>
@@ -9,4 +9,4 @@
     <option value="error">Error</option>
 </select>
 <label for="">Defina o progresso da tarefa: </label>
-<input type="text" [(ngModel)]="progress">
+<input type="number" [(ngModel)]="progress">

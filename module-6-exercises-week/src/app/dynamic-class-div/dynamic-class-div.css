@@ -76,6 +76,9 @@ div {
   }
 
 .progress-bar{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    visibility: visible;
     height: 10px;
     background-color: green;
 }
