@@ -1,0 +1,18 @@
+:host.alert{
+    padding: 10px;
+    border-radius: 10px;
+    border-left: solid 20px orange;
+    display: block;
+}
+
+:host.info{
+    border-left: solid 20px purple;;
+}
+
+:host.sucesso{
+    border-left: solid 20px green;
+}
+
+:host.erro{
+    border-left: solid 20px red;
+}
