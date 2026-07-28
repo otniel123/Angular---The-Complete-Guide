@@ -11,3 +11,14 @@
 <app-alert-component severidade="erro">
     Alerta de erro
 </app-alert-component>
+<app-quantity-picker-component [(quantidade)]="quantidade" [min]="min" [max]="max"></app-quantity-picker-component>
+<app-quantity-picker-component [quantidade]="quantidade" (quantidadeChange)="quntidadeExpandida($event)" [min]="min" [max]="max"></app-quantity-picker-component>
+<br>
+<app-search-box-component [(textValue)]="text" placeholderValue="teste"></app-search-box-component>
+<button (click)="onClick()">Clique</button>
+<app-h4-component titulo="Titulo do componente H4">
+    <p #paragraph>Paragrafo de teste</p>
+</app-h4-component>
+<app-full-name-exercise>
+    
+</app-full-name-exercise>
