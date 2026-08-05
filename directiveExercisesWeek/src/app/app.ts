@@ -8,10 +8,15 @@ import { AutoSelectDirective } from './directives/autoSelectDirective/auto-selec
 import { BlurUppercaseDirective } from './directives/blurUppercaseDirective/blur-uppercase-directive';
 import { RoundedDirective } from './directives/roundedDirective/rounded-directive';
 import { RandomBackgroundDirective } from './directives/randomBackgroundDirective/random-background-directive';
+import { HoverLogDirective } from './directives/hoverLogDirective/hover-log-directive';
+import { ClickLogDirective } from './directives/clickLogDirective/click-log-directive';
+import { ButtonBehaviorDirective } from './directives/buttonBehaviorDirective/button-behavior-directive';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HoverColorDirective, BorderDirective, InputDirective, ClickCounterDirective, AutoSelectDirective, BlurUppercaseDirective, RoundedDirective, RandomBackgroundDirective],
+  imports: [RouterOutlet, HoverColorDirective, BorderDirective, InputDirective, ClickCounterDirective, AutoSelectDirective, 
+            BlurUppercaseDirective, RoundedDirective, RandomBackgroundDirective, HoverLogDirective, ClickLogDirective,
+            ButtonBehaviorDirective],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
