@@ -11,15 +11,22 @@ import { RandomBackgroundDirective } from './directives/randomBackgroundDirectiv
 import { HoverLogDirective } from './directives/hoverLogDirective/hover-log-directive';
 import { ClickLogDirective } from './directives/clickLogDirective/click-log-directive';
 import { ButtonBehaviorDirective } from './directives/buttonBehaviorDirective/button-behavior-directive';
+import { TemplateRefShowDirective } from './directives/templateRefShowDirective/template-ref-show-directive';
+import { AlwaysShowDirective } from './directives/alwaysShowDirective/always-show-directive';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, HoverColorDirective, BorderDirective, InputDirective, ClickCounterDirective, AutoSelectDirective, 
             BlurUppercaseDirective, RoundedDirective, RandomBackgroundDirective, HoverLogDirective, ClickLogDirective,
-            ButtonBehaviorDirective],
+            ButtonBehaviorDirective, TemplateRefShowDirective, AlwaysShowDirective],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
+  alwaysShowAppears = false;
   protected readonly title = signal('directiveExercisesWeek');
+
+  onClickShowOrNotDirective(){
+    this.alwaysShowAppears = !this.alwaysShowAppears;
+  }
 }
