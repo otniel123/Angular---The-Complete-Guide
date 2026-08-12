@@ -1,0 +1,14 @@
+<p>Nome do usuário: {{user.name | titlecase}}</p>
+<p>Data de nascimento do usuário: {{user.birthDate | date}}</p>
+<p>Salário do usuário: {{user.salary | currency:'BRL'}}</p>
+
+<h1>Produto</h1>
+
+<p>Nome do produto: {{product.name | titlecase}}</p>
+<p>Preco do produto: {{product.price | currency:'BRL'}}</p>
+<p>Data de lançamento do produto: {{product.releaseDate | date:'dd/MM/yyyy'}}</p>
+
+<h1>Usuários</h1>
+@for (user of users | slice: 0 : 2; track user.name) {
+    <p>Nome do usuário: {{user | json}}</p>
+}
