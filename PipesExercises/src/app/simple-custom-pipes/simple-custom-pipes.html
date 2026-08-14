@@ -1,3 +1,17 @@
 <h1>Reverse Pipe</h1>
 <p>Texto normal: Olá, esse é o texto sem a pipe</p>
 Texto invertido: {{'Olá, esse é o texto sem a pipe' | reverse}}
+
+<h1>Truncate Pipe</h1>
+<p>Texto normal: Olá, esse é o texto sem a pipe</p>
+Texto truncado: {{'Olá, esse é o texto sem a pipe' | truncate:10}}
+
+<h1>MaskEmail Pipe</h1>
+<p>Email normal: otniel@gmail.com</p>
+Email com a mask: {{'otniel@gmail.com' | maskEmail:5}}
+
+<h1>Temperature Pipe</h1>
+<p>Graus celsius: 30</p>
+Graus F: {{30 | temperature:'F'}}
+<br>
+Graus K: {{30 | temperature:'K'}}
