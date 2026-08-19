@@ -15,3 +15,12 @@ Email com a mask: {{'otniel@gmail.com' | maskEmail:5}}
 Graus F: {{30 | temperature:'F'}}
 <br>
 Graus K: {{30 | temperature:'K'}}
+
+<h1>SumImpure pipe</h1>
+<p>{{numbers | sumImpure}}</p>
+
+
+<h1>SumPure pipe</h1>
+<p>{{numbers | sumPure}}</p>
+
+<button (click)="addNumber()">Add Number</button>
