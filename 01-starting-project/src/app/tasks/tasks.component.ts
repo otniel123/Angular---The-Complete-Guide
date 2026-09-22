@@ -1,33 +1,12 @@
-import { Component, Input } from '@angular/core';
-import { TaskComponent } from "./task/task.component";
+import { Component } from '@angular/core';
+
 import { NewTaskComponent } from './new-task/new-task.component';
-import { NewTaskData } from './task/task.model';
-import { TasksService } from './tasks.service';
+import { TasksListComponent } from './tasks-list/tasks-list.component';
 
 @Component({
   selector: 'app-tasks',
-  standalone: false,
+  standalone: true,
   templateUrl: './tasks.component.html',
-  styleUrl: './tasks.component.css'
+  imports: [NewTaskComponent, TasksListComponent],
 })
-export class TasksComponent {
-  @Input({required: true}) userId !: string;
-  @Input({required: true}) nameUser !: string;
-  isAddingTask: boolean = false;
-
-  constructor(private tasksService: TasksService){
-  }
-  
-
-  get selectedUserTasks(){
-    return this.tasksService.getUserTasks(this.userId);
-  }
-
-  onStartAddTask(){
-    this.isAddingTask = true;
-  }
-
-  onCloseAddTask(){
-    this.isAddingTask = false;
-  }
-}
+export class TasksComponent {}
