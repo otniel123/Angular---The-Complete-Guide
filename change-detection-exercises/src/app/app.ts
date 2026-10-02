@@ -5,10 +5,11 @@ import { NameComponent } from './name-component/name-component';
 import { NameAndCounterComponent } from './name-and-counter-component/name-and-counter-component';
 import { CounterZoneComponent } from './counter-zone-component/counter-zone-component';
 import { MainComponent } from './main.component';
+import { CdrTestComponent } from './cdr.test.component';
 
 @Component({
   selector: 'app-root',
-  imports: [NameAndCounterComponent, CounterZoneComponent, MainComponent],
+  imports: [NameAndCounterComponent, CounterZoneComponent, MainComponent, CdrTestComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
