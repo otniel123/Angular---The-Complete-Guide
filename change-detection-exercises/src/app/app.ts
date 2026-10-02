@@ -4,10 +4,11 @@ import { CounterComponent } from './counter-component/counter-component';
 import { NameComponent } from './name-component/name-component';
 import { NameAndCounterComponent } from './name-and-counter-component/name-and-counter-component';
 import { CounterZoneComponent } from './counter-zone-component/counter-zone-component';
+import { MainComponent } from './main.component';
 
 @Component({
   selector: 'app-root',
-  imports: [NameAndCounterComponent, CounterZoneComponent],
+  imports: [NameAndCounterComponent, CounterZoneComponent, MainComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
