@@ -2,10 +2,11 @@ import { Component, OnInit, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Observable3 } from './observable3/observable3';
+import { Observable5 } from './observable5/observable5';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Observable3],
+  imports: [RouterOutlet, Observable3, Observable5],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
