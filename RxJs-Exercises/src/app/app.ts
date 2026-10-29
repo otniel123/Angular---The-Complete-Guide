@@ -3,10 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Observable3 } from './observable3/observable3';
 import { Observable5 } from './observable5/observable5';
+import { EmitterComponent } from './observable6/emitter-component/emitter-component';
+import { Counter } from './observable7/counter/counter';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Observable3, Observable5],
+  imports: [RouterOutlet, Observable3, Observable5, EmitterComponent, Counter],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

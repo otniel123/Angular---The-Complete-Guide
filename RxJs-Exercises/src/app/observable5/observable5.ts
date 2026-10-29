@@ -9,7 +9,7 @@ import { filter, map, Observable } from 'rxjs';
 })
 export class Observable5 implements OnInit{
   observable$ = new Observable<number>((subscriber) => {
-    for(let i = 1; i < 20; i++){
+    for(let i = 1; i <= 20; i++){
       subscriber.next(i);
     }
   })
@@ -19,7 +19,7 @@ export class Observable5 implements OnInit{
       filter(val => val % 2 == 0),
       map(val => Math.pow(val, 2))
     ).subscribe({
-      next: (val) => console.log("Observable 5" + val)
+      next: (val) => console.log("Observable 5 " + val)
     })
   }
 }
