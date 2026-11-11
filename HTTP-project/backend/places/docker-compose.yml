@@ -1,0 +1,25 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: places-postgres
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_DB: places_db
+      POSTGRES_USER: places_user
+      POSTGRES_PASSWORD: places_password
+
+    ports:
+      - "5433:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U places_user -d places_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
