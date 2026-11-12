@@ -2,7 +2,9 @@ package projetoHttp.places.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import projetoHttp.places.dto.response.PlaceResponse;
 import projetoHttp.places.entity.Place;
+import projetoHttp.places.factory.PlaceFactory;
 import projetoHttp.places.repository.PlaceRepository;
 
 import java.util.List;
@@ -12,7 +14,10 @@ import java.util.List;
 public class PlaceService {
     private final PlaceRepository placeRepository;
 
-    public List<Place> findAll(){
-        return this.placeRepository.findAll();
+    public List<PlaceResponse> findAll(){
+
+        List<Place> placesList = this.placeRepository.findAll();
+
+        return PlaceFactory.placeResponseListFromPlaceList(placesList);
     }
 }

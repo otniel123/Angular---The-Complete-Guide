@@ -1,0 +1,44 @@
+<section class="places-container">
+  <header class="places-header">
+    <div>
+      <span class="section-label">EXPLORE O MUNDO</span>
+      <h1>Discover Places</h1>
+      <p>Explore lugares incríveis ao redor do mundo.</p>
+    </div>
+  </header>
+
+  <div class="places-grid">
+    @for (place of places(); track place.id) {
+        <article class="place-card">
+
+      <div class="place-image">
+        <img
+          [src]="place.imageUrl"
+          [alt]="place.title"
+        />
+      </div>
+
+      <div class="place-content">
+        <div class="place-location">
+          <span>📍</span>
+          {{ place.city }}, {{ place.country }}
+        </div>
+
+        <h2>{{ place.title }}</h2>
+
+        <p class="place-description">
+          {{ place.description }}
+        </p>
+
+        <div class="place-footer">
+          <span class="place-category">
+            {{ place.category }}
+          </span>
+        </div>
+      </div>
+
+    </article>
+    }
+    
+  </div>
+</section>
