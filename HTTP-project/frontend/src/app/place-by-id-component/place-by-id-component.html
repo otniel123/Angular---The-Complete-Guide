@@ -1,0 +1,10 @@
+<p>Digite o id de um lugar para ver mais detalhes sobre ele: </p>
+<input type="number" [ngModel]="placeId()" (ngModelChange)="placeId.set($event)">
+<button (click)="onClick()">Clique aqui para pesquisar o lugar</button>
+@if (place() != null) {
+    <p>{{place()?.id}}</p>
+    <p>{{place()?.title}}</p>
+    <p>{{place()?.description}}</p>
+    <p>{{place()?.city}}</p>
+    <p>{{place()?.country}}</p>
+}

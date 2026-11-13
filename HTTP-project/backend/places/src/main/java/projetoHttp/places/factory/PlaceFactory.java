@@ -20,4 +20,11 @@ public class PlaceFactory {
         }
         return placeResponseList;
     }
+
+    public static PlaceResponse placeResponseFromPlace(Place place){
+        PlaceResponse placeResponse = new PlaceResponse(place.getId(), place.getTitle(),
+                place.getDescription(), place.getImageUrl(), place.getCity(), place.getCountry(),
+                place.getCategory(), place.getCreatedAt());
+        return placeResponse;
+    }
 }
