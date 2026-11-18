@@ -18,4 +18,8 @@ export class PlaceService {
   getPlaceById(id: number | null){
     return this.http.get<Place>(this.apiUrl + "/" + id);
   }
+
+  createPlace(){
+    
+  }
 }

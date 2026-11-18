@@ -1,0 +1,99 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f1f3f8;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+form {
+    background: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+form::before {
+    content: "Cadastrar Lugar";
+    font-size: 26px;
+    font-weight: 700;
+    color: #252b42;
+    margin-bottom: 25px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #41475a;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #dce0e8;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #333;
+    background: #fafbfe;
+    outline: none;
+    margin-bottom: 22px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #6366f1;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+input::placeholder {
+    color: #a0a5b5;
+}
+
+@media (max-width: 550px) {
+    form {
+        padding: 25px 20px;
+    }
+
+    form::before {
+        font-size: 23px;
+    }
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: #6366f1;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #4f46e5;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}

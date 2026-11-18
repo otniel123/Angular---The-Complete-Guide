@@ -1,0 +1,22 @@
+<form action="" (ngSubmit)="createPlace()">
+    <label for="">Titulo do Lugar: </label>
+    <input type="text" name="titulo" id="titulo" [(ngModel)]="placeTitle" >
+
+    <label for="">Descrição do Lugar: </label>
+    <input type="text" name="descrição" id="descrição" [(ngModel)]="placeDescription">
+
+    <label for="">URL imagem do lugar: </label>
+    <input type="text" name="imageUrl" id="imageUrl" [(ngModel)]="imagePlaceUrl">
+
+    <label for="">Cidade onde esse lugar fica</label>
+    <input type="text" name="city" id="city">
+
+    <label for="">País onde esse lugar fica: </label>
+    <input type="text" name="country" id="country" [(ngModel)]="placeCountry">
+
+    <label for="">Categoria do lugar</label>
+    <input type="text" name="category" id="category" [(ngModel)]="placeCategory">
+
+    <button type="submit">Cadastrar lugar</button>
+
+</form>
