@@ -1,6 +1,7 @@
 package projetoHttp.places.factory;
 
 import projetoHttp.places.PlacesApplication;
+import projetoHttp.places.dto.request.PlaceRequest;
 import projetoHttp.places.dto.response.PlaceResponse;
 import projetoHttp.places.entity.Place;
 
@@ -26,5 +27,18 @@ public class PlaceFactory {
                 place.getDescription(), place.getImageUrl(), place.getCity(), place.getCountry(),
                 place.getCategory(), place.getCreatedAt());
         return placeResponse;
+    }
+
+    public static Place placeFromPlaceRequest(PlaceRequest placeRequest){
+        Place place = new Place();
+
+        place.setTitle(placeRequest.title());
+        place.setDescription(placeRequest.description());
+        place.setImageUrl(placeRequest.imageUrl());
+        place.setCity(placeRequest.city());
+        place.setCountry(placeRequest.country());
+        place.setCategory(placeRequest.categogry());
+        place.setCreatedAt(placeRequest.createdAt());
+        return place;
     }
 }

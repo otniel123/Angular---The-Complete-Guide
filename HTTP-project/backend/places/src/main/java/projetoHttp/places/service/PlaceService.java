@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
+import projetoHttp.places.dto.request.PlaceRequest;
 import projetoHttp.places.dto.response.PlaceResponse;
 import projetoHttp.places.entity.Place;
 import projetoHttp.places.factory.PlaceFactory;
@@ -33,5 +34,12 @@ public class PlaceService {
         }else {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Place não encontrado");
         }
+    }
+
+    public PlaceResponse createPlace(PlaceRequest placeRequest){
+        Place placeParam = PlaceFactory.placeFromPlaceRequest(placeRequest);
+        Place placeReturn = placeRepository.save(placeParam);
+
+        return PlaceFactory.placeResponseFromPlace(placeReturn);
     }
 }

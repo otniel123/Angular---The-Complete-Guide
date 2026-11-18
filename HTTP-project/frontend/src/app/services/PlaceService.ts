@@ -19,7 +19,9 @@ export class PlaceService {
     return this.http.get<Place>(this.apiUrl + "/" + id);
   }
 
-  createPlace(){
-    
+  createPlace(placeRequest: PlaceRequest){
+    console.log("Dentro do create place do service")
+    console.log(JSON.stringify(placeRequest, null, 2));
+    return this.http.post<PlaceRequest>(this.apiUrl, placeRequest);
   }
 }
