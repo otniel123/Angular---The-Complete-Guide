@@ -18,7 +18,7 @@ public record PlaceRequest(
 
     String country,
 
-    String categogry,
+    String category,
 
     LocalDateTime createdAt
 ) {

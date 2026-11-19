@@ -1,0 +1,5 @@
+<form action="" (ngSubmit)="onSubmit()">
+    <label for="">Digite o id do lugar que vc deseja excluir: </label>
+    <input name="idPlace" id="idPlace" type="number" [ngModel]="idPlace()" (ngModelChange)="idPlace.set($event)">
+    <button type="submit">Deletar place</button>
+</form>

@@ -24,4 +24,9 @@ export class PlaceService {
     console.log(JSON.stringify(placeRequest, null, 2));
     return this.http.post<PlaceRequest>(this.apiUrl, placeRequest);
   }
+
+  deletePlace(id: number){
+    console.log("ID do lugar: " + id)
+    return this.http.delete(this.apiUrl + "/" + id);
+  }
 }

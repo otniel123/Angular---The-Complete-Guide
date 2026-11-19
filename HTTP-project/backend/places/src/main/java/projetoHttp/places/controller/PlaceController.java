@@ -33,4 +33,9 @@ public class PlaceController {
         return ResponseEntity.status(201).body(this.placeService.createPlace(placeRequest)).getBody();
     }
 
+    @DeleteMapping("/{id}")
+    public void deletePlace(@PathVariable Long id){
+        this.placeService.deletePlace(id);
+    }
+
 }

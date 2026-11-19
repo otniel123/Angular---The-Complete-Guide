@@ -30,6 +30,8 @@ export class RegisterPlaceComponent {
       createdAt: this.placeCreationDate
     }
 
+    console.log("Categoria do lugar: " + placeRequest.category)
+
     const obs = this.placeService.createPlace(placeRequest);
     obs.subscribe({
       next: (res) => console.log("Dentro do next " + res),

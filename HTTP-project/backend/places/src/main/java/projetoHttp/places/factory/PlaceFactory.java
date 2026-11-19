@@ -37,8 +37,22 @@ public class PlaceFactory {
         place.setImageUrl(placeRequest.imageUrl());
         place.setCity(placeRequest.city());
         place.setCountry(placeRequest.country());
-        place.setCategory(placeRequest.categogry());
+        place.setCategory(placeRequest.category());
         place.setCreatedAt(placeRequest.createdAt());
+        return place;
+    }
+
+    public static Place placeFromPlaceResponse(PlaceResponse placeResponse){
+        Place place = new Place();
+
+        place.setId(placeResponse.id());
+        place.setTitle(placeResponse.title());
+        place.setDescription(placeResponse.description());
+        place.setImageUrl(placeResponse.imageUrl());
+        place.setCity(placeResponse.city());
+        place.setCountry(placeResponse.country());
+        place.setCategory(placeResponse.category());
+        place.setCreatedAt(placeResponse.createdAt());
         return place;
     }
 }

@@ -42,4 +42,9 @@ public class PlaceService {
 
         return PlaceFactory.placeResponseFromPlace(placeReturn);
     }
+
+    public void deletePlace(Long id){
+        Place place = PlaceFactory.placeFromPlaceResponse(this.findById(id));
+        this.placeRepository.delete(place);
+    }
 }
